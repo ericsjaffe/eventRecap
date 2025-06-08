@@ -29,6 +29,14 @@
             <h2>Generated Recap:</h2>
             <p>{{ recap }}</p>
         </div>
+
+        <div class="share-buttons">
+            <h3>📤 Share Recap:</h3>
+            <a href="https://twitter.com/intent/tweet?text={{ recap | urlencode }}" target="_blank">Twitter/X</a> |
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://eventrecap.onrender.com&summary={{ recap | urlencode }}" target="_blank">LinkedIn</a> |
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://eventrecap.onrender.com&quote={{ recap | urlencode }}" target="_blank">Facebook</a> |
+            <span title="Copy and paste recap manually for Snapchat or TikTok">📱 Instagram, Snapchat, TikTok (copy & post manually)</span>
+        </div>
         {% endif %}
     </div>
 </body>

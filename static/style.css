@@ -31,3 +31,15 @@ button {
 .media-preview {
     margin-top: 15px;
 }
+.share-buttons {
+    margin-top: 15px;
+    font-size: 16px;
+}
+.share-buttons a {
+    color: #0066cc;
+    text-decoration: none;
+    margin-right: 10px;
+}
+.share-buttons a:hover {
+    text-decoration: underline;
+}

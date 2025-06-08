@@ -1,12 +1,14 @@
-# Event Recap Generator with Media
+# Event Recap Generator with Media + Social Sharing
 
-Generate event recaps based on bullet points and an optional uploaded photo or video.
+Generate event recaps based on bullet points and an optional uploaded photo or video, then share them on social media.
 
 ## Features
 
 - Upload image or video with event notes
 - Generate recap using OpenAI GPT-3.5
-- Display uploaded media on result page
+- Display uploaded media
+- Share recap to Twitter/X, LinkedIn, Facebook
+- Manual sharing for Instagram, TikTok, Snapchat
 
 ## Setup
 
