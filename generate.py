@@ -7,7 +7,8 @@ def generate_recap(notes):
     prompt = f"Turn these event notes into a polished professional event recap:\n\n{notes}\n\nRecap:"
     try:
         response = openai.chat.completions.create(
-            model="gpt-4",
+         model="gpt-4-turbo",
+
             messages=[
                 {"role": "user", "content": prompt}
             ],
