@@ -1,13 +1,25 @@
 # Event Recap Generator
 
-This Flask app uses the OpenAI API to turn bullet-point event notes into professional recaps.
-
-## Features
-- Simple web UI for input
-- GPT-4 powered summarization
-- Deploy-ready for Render
+Generate polished event summaries from bullet points using OpenAI GPT-4.
 
 ## Setup
-1. `pip install -r requirements.txt`
-2. Add your OpenAI API key to `.env`
-3. Run with `flask run`
+
+1. Install dependencies:
+```
+pip install -r requirements.txt
+```
+
+2. Add your OpenAI API key to a `.env` file:
+```
+OPENAI_API_KEY=your-key-here
+```
+
+3. Run the app:
+```
+flask run
+```
+
+## Deploy to Render
+
+- Set the start command: `gunicorn app:app`
+- Add environment variable `OPENAI_API_KEY` in the dashboard

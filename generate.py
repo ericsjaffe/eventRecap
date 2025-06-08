@@ -1,12 +1,12 @@
 import openai
 import os
 
-client = openai.OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 def generate_recap(notes):
     prompt = f"Turn these event notes into a polished professional event recap:\n\n{notes}\n\nRecap:"
     try:
-        response = client.chat.completions.create(
+        response = openai.chat.completions.create(
             model="gpt-4",
             messages=[
                 {"role": "user", "content": prompt}
