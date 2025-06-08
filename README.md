@@ -1,6 +1,12 @@
-# Event Recap Generator
+# Event Recap Generator with Media
 
-Generate polished event summaries from bullet points using OpenAI GPT-4.
+Generate event recaps based on bullet points and an optional uploaded photo or video.
+
+## Features
+
+- Upload image or video with event notes
+- Generate recap using OpenAI GPT-3.5
+- Display uploaded media on result page
 
 ## Setup
 
@@ -22,4 +28,4 @@ flask run
 ## Deploy to Render
 
 - Set the start command: `gunicorn app:app`
-- Add environment variable `OPENAI_API_KEY` in the dashboard
+- Add environment variable `OPENAI_API_KEY`

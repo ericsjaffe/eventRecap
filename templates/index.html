@@ -1,16 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Event Recap Generator</title>
+    <title>Event Recap Generator with Media</title>
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
     <div class="container">
         <h1>📝 Event Recap Generator</h1>
-        <form method="post">
+        <form method="post" enctype="multipart/form-data">
             <textarea name="notes" placeholder="Enter bullet points from your event..." required></textarea><br>
+            <input type="file" name="media" accept="image/*,video/*"><br><br>
             <button type="submit">Generate Recap</button>
         </form>
+        {% if media_url %}
+            <div class="media-preview">
+                {% if media_url.endswith('.mp4') or media_url.endswith('.mov') %}
+                    <video controls width="100%">
+                        <source src="{{ media_url }}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                {% else %}
+                    <img src="{{ media_url }}" alt="Uploaded media" width="100%">
+                {% endif %}
+            </div>
+        {% endif %}
         {% if recap %}
         <div class="output">
             <h2>Generated Recap:</h2>
