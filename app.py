@@ -11,7 +11,7 @@ app = Flask(__name__)
 def index():
     recap = ""
     if request.method == "POST":
-        notes = request.form["notes"]
+        notes = request.form.get["notes", ""]
         recap = generate_recap(notes)
     return render_template("index.html", recap=recap)
 
