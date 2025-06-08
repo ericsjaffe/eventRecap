@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Recap Generator</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📝 Event Recap Generator</h1>
+        <form method="post">
+            <textarea name="notes" placeholder="Enter bullet points from your event..." required></textarea><br>
+            <button type="submit">Generate Recap</button>
+        </form>
+        {% if recap %}
+        <div class="output">
+            <h2>Generated Recap:</h2>
+            <p>{{ recap }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
